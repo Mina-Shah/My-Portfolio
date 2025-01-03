@@ -7,12 +7,12 @@ const About = () => {
         <h1 className="mt-10 text-3xl sm:text-4xl font-bold text-yellow-400 mb-8 text-center sm:text-left border-b-2 border-yellow-400 pb-2 animate-fadeIn">
           About Me
         </h1>
-        <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed text-justify sm:text-left animate-slide-in-up">
+        <p className="leading-tight text-base sm:text-lg lg:text-xl text-gray-300 mb-8 text-justify sm:text-left animate-slide-in-up">
           I'm <span className="font-semibold text-slate-300">Mina Shah</span>, a passionate frontend web developer from Karachi, Pakistan, with a keen eye for design and a strong foundation 
           in modern web technologies. My journey into web development began with a curiosity for how websites function, 
           and over the years, it has evolved into a full-fledged career and passion.
         </p>
-        <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed text-justify sm:text-left animate-slide-in-up">
+        <p className="leading-tight text-base sm:text-lg lg:text-xl text-gray-300 text-justify sm:text-left animate-slide-in-up">
           I’m always excited to collaborate on new projects or discuss innovative ideas.
         </p>
       </div>
