@@ -68,12 +68,12 @@ const Projects = () => {
       {images.map((image, index) => (
         <div
           key={index}
-          className="bg-neutral-900 drop-shadow-2xl flex flex-col items-center p-4 rounded-lg shadow-lg group transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+          className="bg-neutral-900 drop-shadow-2xl flex flex-col items-center p-4 rounded-lg shadow-lg group transform transition duration-300 hover:scale-105 hover:shadow-2xl animate-slide-in-up"
           >
           <img
             src={image.src}
             alt={image.alt}
-            className="h-48 w-full object-cover rounded-lg"
+            className="h-48 w-full object-cover rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-xl"
           />
            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex justify-center items-center transition-opacity duration-300">
                 <button className="bg-yellow-500 text-black px-4 py-2 rounded-md font-semibold shadow-lg hover:bg-yellow-600"

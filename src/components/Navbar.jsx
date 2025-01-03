@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
 
         <div>
-          <div className="lg:hidden ml-48 md:ml-96  ">
+          <div className="lg:hidden ml-48 md:ml-96">
             <button onClick={toggleNavbar} className="text-yellow-500">
               {menuOpen ? <X /> : <Menu size={28} />}
             </button>
@@ -31,6 +31,9 @@ const Navbar = () => {
               <ul className=" space-y-2 text-yellow-500">
                 <li className=" hover:text-white">
                   <NavLink to="/home">Home</NavLink>
+                </li>
+                <li className=" hover:text-white">
+                  <NavLink to="/about">About</NavLink>
                 </li>
                 <li className=" hover:text-white">
                   <NavLink to="/projects">Projects</NavLink>
@@ -48,6 +51,9 @@ const Navbar = () => {
             <li className="lg:hover:text-white">
               <NavLink to="/home">Home</NavLink>
             </li>
+            <li className=" hover:text-white">
+                  <NavLink to="/about">About</NavLink>
+                </li>
             <li className="lg:hover:text-white">
                   <NavLink to="/projects">Projects</NavLink>
                 </li>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen text-white flex flex-wrap justify-center items-center p-5">
+    <div className="min-h-screen text-white flex flex-wrap justify-center items-center p-5 animate-slide-in-up">
       <div className="max-w-3xl w-full bg-neutral-900 rounded-lg shadow-lg p-8">
         <h1 className="text-3xl font-bold text-yellow-500 mb-6 text-center">
           Get in Touch
