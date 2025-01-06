@@ -1,10 +1,10 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 const Navbar = () => {
-
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -13,13 +13,23 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className= "h-16 flex justify-between items-center px-5">
+      <nav className="h-16 flex justify-between items-center px-5">
         <div className="flex items-center space-x-2">
-          <p className="font-bold text-2xl text-yellow-500 md:ml-20 lg:ml-20 lg:text-3xl">
+          <a
+            onClick={() => navigate("/home")}
+            className="cursor-pointer font-bold text-2xl text-yellow-500 md:ml-20 lg:ml-20 lg:text-3xl"
+          >
             MinaShah
-          </p>
+          </a>
         </div>
-
+        <div className="hidden lg:block">
+          <a
+            href="images/Resume MIna Shah.jpg"
+            className="ml-96 px-3 py-1 bg-yellow-500 text-neutral-900 font-medium rounded-md text-sm hover:bg-yellow-600 transition"
+          >
+            Resume
+          </a>
+        </div>
         <div>
           <div className="lg:hidden ml-48 md:ml-96">
             <button onClick={toggleNavbar} className="text-yellow-500">
@@ -41,6 +51,14 @@ const Navbar = () => {
                 <li className="hover:text-white">
                   <NavLink to="/contact">Contact</NavLink>
                 </li>
+                <li>
+                  <a
+                    href="images/Resume MIna Shah.jpg"
+                    className="px-1 py-1 bg-yellow-500 text-neutral-900 font-medium rounded-sm text-sm hover:bg-yellow-600 transition"
+                  >
+                    Resume
+                  </a>
+                </li>
               </ul>
             </div>
           )}
@@ -52,22 +70,20 @@ const Navbar = () => {
               <NavLink to="/home">Home</NavLink>
             </li>
             <li className=" hover:text-white">
-                  <NavLink to="/about">About</NavLink>
-                </li>
+              <NavLink to="/about">About</NavLink>
+            </li>
             <li className="lg:hover:text-white">
-                  <NavLink to="/projects">Projects</NavLink>
-                </li>
+              <NavLink to="/projects">Projects</NavLink>
+            </li>
             <li className="lg:hover:text-white">
               <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
         </div>
-
-       
       </nav>
       <Outlet />
     </>
   );
 };
 
-export default Navbar
+export default Navbar;

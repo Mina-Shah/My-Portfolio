@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       animation: {
-        'fade-in': 'fadeIn 2s ease-out forwards', // Keeps the final state
-        'slide-in-up': 'slideInUp 0.5s ease-out forwards',
+        'fade-in': 'fadeIn 2s ease-out forwards', 
+        'slide-in-up': 'slideInUp 1s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
