@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <a
             href="images/Resume MIna Shah.jpg"
-            className="ml-96 px-3 py-1 bg-yellow-500 text-neutral-900 font-medium rounded-md text-sm hover:bg-yellow-600 transition"
+            className="ml-96 px-3 py-1 border font-medium rounded-md hover:bg-neutral-800 transition"
           >
             Resume
           </a>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <li>
                   <a
                     href="images/Resume MIna Shah.jpg"
-                    className="px-1 py-1 bg-yellow-500 text-neutral-900 font-medium rounded-sm text-sm hover:bg-yellow-600 transition"
+                    className="px-2 py-1 text-white border rounded-sm text-sm hover:bg-neutral-800 transition"
                   >
                     Resume
                   </a>
