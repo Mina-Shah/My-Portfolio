@@ -7,7 +7,7 @@ const techStack = [
 
 const About = () => {
   return (
-    <div className="text-white min-h-screen flex flex-col items-center px-6 py-16">
+    <div className="text-white min-h-screen flex flex-col items-center px-6 py-16 animate-slide-in-up">
       {/* About Me Section */}
       <div className="max-w-3xl text-center">
         <h1 className="text-4xl font-extrabold text-yellow-400 border-b-4 border-yellow-500 pb-2 inline-block">

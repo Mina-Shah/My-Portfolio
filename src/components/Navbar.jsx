@@ -34,14 +34,14 @@ const Navbar = () => {
         <div>
           <div className="lg:hidden ml-48 md:ml-96">
             <button onClick={toggleNavbar} className="text-yellow-500 transition">
-              {menuOpen ? <X /> : <Menu size={28} />}
+              {menuOpen ? <X className="border-2 border-yellow-500 rounded"/> : <Menu size={28} />}
               
             </button>
           </div>
 
           {menuOpen && (
-            <div className="bg-neutral-900 h-screen lg:hidden fixed right-0 z-20 w-60 flex flex-col justify-center items-center">
-              <ul className=" space-y-8 text-yellow-500">
+            <div className="bg-neutral-900 h-72 mt-2 lg:hidden fixed right-0 z-20 w-full flex flex-col justify-center items-center">
+              <ul className="space-y-4 text-yellow-500">
                 <li className=" hover:text-white">
                   <NavLink to="/home">Home</NavLink>
                 </li>
