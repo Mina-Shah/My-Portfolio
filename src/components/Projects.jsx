@@ -63,8 +63,8 @@ const Projects = () => {
 
   return (
     <>
-    <h1 className="text-center mt-10 text-3xl sm:text-4xl font-bold text-yellow-400 sm:text-left md:ml-5 lg:ml-64 animate-fadeIn">
-    Curious To See My Work?
+      <h1 className="text-4xl font-extrabold text-yellow-400 text-center mt-10">
+      Curious To See My Work?
           </h1>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 p-20">
       {images.map((image, index) => (

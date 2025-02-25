@@ -30,15 +30,18 @@ const Navbar = () => {
             Resume
           </a>
         </div>
+
         <div>
           <div className="lg:hidden ml-48 md:ml-96">
-            <button onClick={toggleNavbar} className="text-yellow-500">
+            <button onClick={toggleNavbar} className="text-yellow-500 transition">
               {menuOpen ? <X /> : <Menu size={28} />}
+              
             </button>
           </div>
+
           {menuOpen && (
-            <div className="bg-neutral-900 lg:hidden fixed right-0 z-20  w-full p-6 flex flex-col justify-center items-center">
-              <ul className=" space-y-2 text-yellow-500">
+            <div className="bg-neutral-900 h-screen lg:hidden fixed right-0 z-20 w-60 flex flex-col justify-center items-center">
+              <ul className=" space-y-8 text-yellow-500">
                 <li className=" hover:text-white">
                   <NavLink to="/home">Home</NavLink>
                 </li>
