@@ -22,14 +22,7 @@ const Navbar = () => {
             MinaShah
           </a>
         </div>
-        <div className="hidden lg:block">
-          <a
-            href="images/Resume MIna Shah.jpg"
-            className="ml-96 px-3 py-1 border font-medium rounded-md hover:bg-neutral-800 transition"
-          >
-            Resume
-          </a>
-        </div>
+       
 
         <div>
           <div className="lg:hidden ml-48 md:ml-96">
@@ -43,25 +36,12 @@ const Navbar = () => {
             <div className="bg-neutral-900 h-72 mt-2 lg:hidden fixed right-0 z-20 w-full flex flex-col justify-center items-center">
               <ul className="space-y-4 text-yellow-500">
                 <li className=" hover:text-white">
-                  <NavLink to="/home">Home</NavLink>
-                </li>
-                <li className=" hover:text-white">
                   <NavLink to="/about">About</NavLink>
                 </li>
                 <li className=" hover:text-white">
                   <NavLink to="/projects">Projects</NavLink>
                 </li>
-                <li className="hover:text-white">
-                  <NavLink to="/contact">Contact</NavLink>
-                </li>
-                <li>
-                  <a
-                    href="images/Resume MIna Shah.jpg"
-                    className="px-2 py-1 text-white border rounded-sm text-sm hover:bg-neutral-800 transition"
-                  >
-                    Resume
-                  </a>
-                </li>
+               
               </ul>
             </div>
           )}
@@ -69,18 +49,18 @@ const Navbar = () => {
 
         <div className="">
           <ul className="text-yellow-500 hidden lg:mr-40 lg:justify-center lg:items-center lg:flex lg:gap-9 lg:text-xl">
-            <li className="lg:hover:text-white">
-              <NavLink to="/home">Home</NavLink>
-            </li>
-            <li className=" hover:text-white">
+             <li className=" hover:text-white">
               <NavLink to="/about">About</NavLink>
             </li>
             <li className="lg:hover:text-white">
               <NavLink to="/projects">Projects</NavLink>
             </li>
-            <li className="lg:hover:text-white">
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
+            <button
+            onClick={() => navigate("/contact")}
+            className="mt-2 px-4 py-2 bg-yellow-500 text-black text-lg font-semibold rounded-lg shadow-md hover:bg-yellow-600 w-full sm:w-auto"
+          >
+            Contact Me
+          </button>
           </ul>
         </div>
       </nav>
