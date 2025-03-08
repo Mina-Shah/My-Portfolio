@@ -36,13 +36,13 @@ const Home = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img className="rounded-lg w-full h-40 sm:h-80 md:h-80 object-cover" src="images/p1.PNG" alt="Mockup 1" />
+            <img className="rounded-lg w-full lg:h-96 sm:h-80 md:h-80 object-cover" src="images/p1.PNG" alt="Mockup 1" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="rounded-lg w-full h-40 sm:h-80 md:h-80 object-cover" src="images/p4.PNG" alt="Mockup 2" />
+            <img className="rounded-lg w-full lg:h-96 sm:h-80 md:h-80 object-cover" src="images/p4.PNG" alt="Mockup 2" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="rounded-lg w-full h-40 sm:h-80 md:h-80 object-cover" src="images/p6.PNG" alt="Mockup 3" />
+            <img className="rounded-lg w-full lg:h-96 sm:h-80 md:h-80 object-cover" src="images/p6.PNG" alt="Mockup 3" />
           </SwiperSlide>
         </Swiper>
 
