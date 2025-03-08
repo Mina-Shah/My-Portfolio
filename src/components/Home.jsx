@@ -26,7 +26,7 @@ const Home = () => {
         >
           <SwiperSlide>
             <div className="flex flex-col items-center">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-14 lg:mt-36 mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold md:mt-28 lg:mt-36 mb-4">
                 Frontend Developer.
               </h1>
               <p className="text-base md:text-lg lg:text-xl px-4">
@@ -36,13 +36,13 @@ const Home = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img className="rounded-lg w-full h-60 sm:h-80 md:h-96 object-cover" src="images/mockup1.jpeg" alt="Mockup 1" />
+            <img className="rounded-lg w-full h-40 sm:h-80 md:h-80 object-cover" src="images/p1.PNG" alt="Mockup 1" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="rounded-lg w-full h-60 sm:h-80 md:h-96 object-cover" src="images/mockup2.jpeg" alt="Mockup 2" />
+            <img className="rounded-lg w-full h-40 sm:h-80 md:h-80 object-cover" src="images/p4.PNG" alt="Mockup 2" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="rounded-lg w-full h-60 sm:h-80 md:h-96 object-cover" src="images/mockup3.jpeg" alt="Mockup 3" />
+            <img className="rounded-lg w-full h-40 sm:h-80 md:h-80 object-cover" src="images/p6.PNG" alt="Mockup 3" />
           </SwiperSlide>
         </Swiper>
 

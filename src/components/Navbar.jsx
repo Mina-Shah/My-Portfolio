@@ -33,7 +33,7 @@ const Navbar = () => {
           </div>
 
           {menuOpen && (
-            <div className="bg-neutral-900 h-72 mt-2 lg:hidden fixed right-0 z-20 w-full flex flex-col justify-center items-center">
+            <div className="bg-neutral-900 h-52 w-full mt-2 lg:hidden fixed right-0 z-20 flex flex-col justify-center items-center">
               <ul className="space-y-4 text-yellow-500">
                 <li className=" hover:text-white">
                   <NavLink to="/about">About</NavLink>
