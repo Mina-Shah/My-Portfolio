@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="mt-20 flex flex-col items-center justify-center text-center p-5 animate-slide-in-up w-full max-w-6xl mx-auto">
+      <div className="mt-32 md:mt-20 lg:mt-20 flex flex-col items-center justify-center text-center p-5 animate-slide-in-up w-full max-w-6xl mx-auto">
         <Swiper
           spaceBetween={20}
           slidesPerView={1}
