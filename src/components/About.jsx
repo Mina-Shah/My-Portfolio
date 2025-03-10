@@ -48,7 +48,7 @@ const About = () => {
         <h2 className="text-3xl text-slate-300 font-semibold text-center">
           Tech Stack
         </h2>
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-center animate-pulse">
+        <div className="mt-10 grid grid-cols-3 md:grid-cols-4 lg:flex gap-6 justify-center animate-pulse">
           {techStack.map((tech) => (
             <div key={tech.name} className="flex flex-col items-center group">
               <img

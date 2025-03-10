@@ -57,7 +57,7 @@ const Navbar = () => {
             </li>
             <button
             onClick={() => navigate("/contact")}
-            className="mt-2 px-4 py-2 bg-yellow-500 text-black text-lg font-semibold rounded-lg shadow-md hover:bg-yellow-600 w-full sm:w-auto"
+            className="mt-2 px-4 py-2 bg-yellow-500 text-black text-lg font-semibold rounded-lg shadow-md hover:bg-yellow-600 w-full sm:w-auto animate-pulse"
           >
             Contact Me
           </button>
