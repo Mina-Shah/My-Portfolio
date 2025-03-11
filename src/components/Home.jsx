@@ -1,65 +1,73 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import { motion } from "framer-motion";
 import Projects from "./Projects";
 import About from "./About";
+
+const images = [
+  "images/p1.PNG",
+  "images/p4.PNG",
+  "images/p6.PNG",
+   "images/p2.PNG"
+];
+
+const loopImages = [...images, ...images];
+
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
     <>
-      <div className="mt-32 md:mt-20 lg:mt-20 flex flex-col items-center justify-center text-center p-5 animate-slide-in-up w-full max-w-6xl mx-auto">
-        <Swiper
-          spaceBetween={20}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 2000 }}
-         // pagination={{ clickable: true }}
-        //  navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="w-full max-w-3xl"
-        >
-          <SwiperSlide>
-            <div className="flex flex-col items-center">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold md:mt-28 lg:mt-36 mb-4">
+      <div className="flex flex-col items-center justify-center text-center p-5 animate-slide-in-up w-full max-w-6xl mx-auto">
+      <div className="flex flex-col items-center">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-20 md:mt-28 lg:mt-32 mb-4">
                 Frontend Developer.
               </h1>
-              <p className="text-base md:text-lg lg:text-xl px-4">
-                Hi, I am Mina Shah, a frontend developer crafting seamless and
-                engaging web experiences.
+              <p className="text-sm tracking-wide md:text-lg lg:text-xl px-4 mb-2">
+              <span>Hi! I am Mina Shah, a frontend developer.</span> <br />
+              <span>Crafting seamless and engaging web experiences.</span>
               </p>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="rounded-lg w-full lg:h-96 sm:h-80 md:h-80 object-cover" src="images/p1.PNG" alt="Mockup 1" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="rounded-lg w-full lg:h-96 sm:h-80 md:h-80 object-cover" src="images/p4.PNG" alt="Mockup 2" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="rounded-lg w-full lg:h-96 sm:h-80 md:h-80 object-cover" src="images/p6.PNG" alt="Mockup 3" />
-          </SwiperSlide>
-        </Swiper>
 
-        <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6 w-full justify-center">
+            <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6 w-full justify-center mb-6">
           <a
             href="images/Resume MIna Shah.jpg"
-            className="text-white border border-white text-lg px-6 py-3 rounded-lg shadow-lg hover:bg-neutral-800 transition duration-300 text-center w-full sm:w-auto"
+            className="text-white border border-white text-lg px-6 py-3 rounded-3xl shadow-lg hover:bg-neutral-800 transition duration-300 text-center w-full sm:w-auto"
           >
             Resume
           </a>
           <button
             onClick={() => navigate("/contact")}
-            className="px-6 py-3 bg-yellow-500 text-black text-lg font-semibold rounded-lg shadow-md hover:bg-yellow-600 w-full sm:w-auto"
+            className="px-6 py-3 bg-yellow-500 text-black text-lg font-semibold rounded-3xl shadow-md hover:bg-yellow-600 w-full sm:w-auto"
           >
             Contact Me
           </button>
         </div>
+
+        <div className="relative overflow-hidden w-full max-w-3xl mx-auto mt-20">
+      {/* Left Shadow */}
+      <div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-black/100 via-black/60 to-transparent z-10 pointer-events-none" />
+
+      {/* Right Shadow */}
+      <div className="absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-black/100 via-black/60 to-transparent z-10 pointer-events-none" />
+
+      {/* Image Slider */}
+      <motion.div
+        className="flex gap-5 w-[200%]"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+      >
+        {loopImages.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`Mockup ${index + 1}`}
+            className="rounded-lg w-auto h-52 object-cover shadow-2xl"
+          />
+        ))}
+      </motion.div>
+    </div>
       </div>
 
       <About />

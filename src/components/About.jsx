@@ -1,28 +1,20 @@
-import React from "react";
-import htmlLogo from "/images/logos/html.png";
-import cssLogo from "/images/logos/css.png";
-import jsLogo from "/images/logos/js.png";
-import tailwindLogo from "/images/logos/tailwind.png";
-import viteLogo from "/images/logos/vite.png";
-import webpackLogo from "/images/logos/webpack.png";
-import reactLogo from "/images/logos/react.png";
-import routerLogo from "/images/logos/react-router-dom.png";
-import gitLogo from "/images/logos/git.png";
-import githubLogo from "/images/logos/github.jpg";
-import Footer from "./Footer";
+import { motion } from "framer-motion";
 
 const techStack = [
-  { src: htmlLogo, alt: "HTML Logo", name: "HTML" },
-  { src: cssLogo, alt: "CSS Logo", name: "CSS" },
-  { src: jsLogo, alt: "JavaScript Logo", name: "JavaScript" },
-  { src: tailwindLogo, alt: "Tailwind CSS Logo", name: "Tailwind CSS" },
-  { src: viteLogo, alt: "Vite Logo", name: "Vite" },
-  { src: webpackLogo, alt: "Webpack Logo", name: "Webpack" },
-  { src: reactLogo, alt: "React Logo", name: "React" },
-  { src: routerLogo, alt: "React Router Logo", name: "React Router" },
-  { src: gitLogo, alt: "Git Logo", name: "Git" },
-  { src: githubLogo, alt: "GitHub Logo", name: "GitHub" },
+  { name: "HTML", src: "images/logos/html.png", alt: "HTML Logo" },
+  { name: "CSS", src: "images/logos/css.png", alt: "CSS Logo" },
+  { name: "JavaScript", src: "images/logos/js.png", alt: "JS Logo" },
+  { name: "React", src: "images/logos/react.png", alt: "React Logo" },
+  { name: "React Router", src: "images/logos/react-router-dom.png", alt: "React Router DOM Logo" },
+  { name: "Tailwind", src: "images/logos/tailwind.png", alt: "Tailwind Logo" },
+  { name: "Vite", src: "images/logos/vite.png", alt: "Vite Logo" },
+  { name: "Webpack", src: "images/logos/webpack.png", alt: "Webpack Logo" },
+  { name: "Git", src: "images/logos/git.png", alt: "Git Logo" },
+  { name: "Github", src: "images/logos/github.jpg", alt: "Github Logo" },
+
 ];
+
+const loopTechStack = [...techStack, ...techStack];
 
 const About = () => {
   return (
@@ -43,24 +35,30 @@ const About = () => {
         </p>
       </div>
 
-      {/* Tech Stack Section */}
-      <div className="max-w-4xl w-full mt-12">
-        <h2 className="text-3xl text-slate-300 font-semibold text-center">
-          Tech Stack
-        </h2>
-        <div className="mt-10 grid grid-cols-3 md:grid-cols-4 lg:flex gap-6 justify-center animate-pulse">
-          {techStack.map((tech) => (
-            <div key={tech.name} className="flex flex-col items-center group">
-              <img
-                src={tech.src}
-                alt={tech.alt}
-                className="h-12 transition-transform duration-300 transform group-hover:scale-110"
-              />
-              <p className="mt-2 text-sm text-gray-400">{tech.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <div className="w-full mt-8 overflow-hidden relative">
+      <h2 className="text-3xl text-slate-300 font-semibold text-center mt-8">
+        Tech Stack
+      </h2>
+
+     
+      {/* Scrolling Tech Stack */}
+      <motion.div
+        className="flex gap-10 mt-10 w-max flex-nowrap"
+        animate={{ x: ["0%", "-50%"] }}  // Moves from Right to Left seamlessly
+        transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+      >
+        {loopTechStack.map((tech, index) => (
+          <div key={index} className="flex flex-col items-center group">
+            <img
+              src={tech.src}
+              alt={tech.alt}
+              className="h-12 transition-transform duration-300 transform group-hover:scale-110"
+            />
+            <p className="mt-2 text-sm text-gray-400">{tech.name}</p>
+          </div>
+        ))}
+      </motion.div>
+    </div>
     </section>
     </>
   );
