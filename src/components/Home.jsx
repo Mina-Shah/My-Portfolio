@@ -25,7 +25,7 @@ const Home = () => {
                 Frontend Developer.
               </h1>
               <p className="text-sm tracking-wide md:text-lg lg:text-xl px-4 mb-2">
-              <span>Hi! I am Mina Shah, a frontend developer.</span> <br />
+              <span>Hi! I am Mina Asif, a frontend developer.</span> <br />
               <span>Crafting seamless and engaging web experiences.</span>
               </p>
             </div>

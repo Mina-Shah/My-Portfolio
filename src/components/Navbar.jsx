@@ -11,7 +11,7 @@ const Navbar = () => {
             onClick={() => navigate("/home")}
             className="cursor-pointer font-bold text-2xl text-yellow-500 lg:text-3xl"
           >
-            MinaShah
+            MinaAsif
           </a>
         </div>
 
