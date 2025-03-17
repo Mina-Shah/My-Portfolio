@@ -30,7 +30,7 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6 w-full justify-center mb-6">
+            <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6 w-ful justify-center mb-6">
           <a
             href="images/Resume MIna Shah.jpg"
             className="text-white border border-white text-lg px-6 py-3 rounded-3xl shadow-lg hover:bg-neutral-800 transition duration-300 text-center w-full sm:w-auto"
@@ -56,7 +56,7 @@ const Home = () => {
       <motion.div
         className="flex gap-5 w-[200%]"
         animate={{ x: ["0%", "-100%"] }}
-        transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+        transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
       >
         {loopImages.map((src, index) => (
           <img

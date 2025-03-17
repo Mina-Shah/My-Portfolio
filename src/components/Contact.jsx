@@ -11,7 +11,7 @@ const Contact = () => {
     <div className="flex flex-col mt-20 mb-10 items-center animate-slide-in-up">
       <button
         onClick={handleClick}
-        className="px-6 py-3 bg-yellow-500 text-black text-lg font-semibold rounded-lg shadow-md hover:bg-yellow-600 "
+        className="px-6 py-3 bg-yellow-500 text-black text-lg font-semibold rounded-3xl shadow-md hover:bg-yellow-600 "
       >
         Contact Me
       </button>
