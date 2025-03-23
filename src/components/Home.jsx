@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Projects from "./Projects";
 import About from "./About";
@@ -28,18 +28,19 @@ const Home = () => {
             <span>Crafting seamless and engaging web experiences.</span>
           </p>
         </div>
-
-        <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6 w-ful justify-center mb-6">
-          <a
-            href="/Mina_Asif_CV.pdf"
-            download="Mina_Asif_CV.pdf"
-            className="text-white border border-white text-lg px-6 py-3 rounded-3xl shadow-lg hover:bg-neutral-800 transition duration-300 text-center w-full sm:w-auto"
+        <div className="flex flex-row items-center gap-4 mt-6 justify-center mb-6 w-full">
+          <Link
+            to="/Mina_Asif__CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white border border-white text-base sm:text-lg px-6 py-3 rounded-3xl shadow-lg hover:bg-neutral-800 transition duration-300 text-center w-auto"
           >
-            My CV
-          </a>
+            Download CV
+          </Link>
+
           <button
             onClick={() => navigate("/contact")}
-            className="px-6 py-3 bg-yellow-500 text-black text-lg font-semibold rounded-3xl shadow-md hover:bg-yellow-600 w-full sm:w-auto"
+            className="px-6 py-3 bg-yellow-500 text-black text-base sm:text-lg font-semibold rounded-3xl shadow-md hover:bg-yellow-600 w-auto"
           >
             Contact Me
           </button>
