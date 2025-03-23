@@ -66,7 +66,7 @@ const Projects = () => {
       <h1 className="text-4xl font-extrabold text-yellow-400 text-center mt-10">
         Curious To See My Work?
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-20 p-10">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 lg:gap-20 p-10">
         {images.map((image, index) => (
           <div
             key={index}
