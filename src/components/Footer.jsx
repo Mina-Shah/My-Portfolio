@@ -3,20 +3,7 @@ const Footer = () => {
     <footer className="text-gray-300 py-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
         <p className="text-sm">&copy; {new Date().getFullYear()} Mina Asif.</p>
-        <div className="mt-5 md:mt-0 lg:mt-0 ">
-          <a href="/home" className="m-2 lg:m-5">
-            Home
-          </a>
-          <a href="/about" className="m-2 lg:m-5">
-            About
-          </a> 
-          <a href="/projects" className="m-2 lg:m-5">
-            Projects
-          </a>
-          <a href="/contact" className="m-2 lg:m-5">
-            Contact
-          </a>
-        </div>
+       
         <div className="flex space-x-4 mt-4 md:mt-0">
           <a
             href="https://github.com/Mina-Shah"
