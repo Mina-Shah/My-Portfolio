@@ -1,28 +1,23 @@
 import { Outlet, useNavigate } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
   return (
     <>
-      <nav className="mt-5 h-16 flex items-center justify-between px-4 md:px-10 lg:px-20">
-        <div className="lg:ml-48 md:ml-32 flex items-center">
+      <nav className="h-16 flex items-center justify-between px-4 md:px-10 lg:px-20">
+        <div className="ml-5 lg:ml-80 md:ml-32 flex items-center">
           <a
             onClick={() => navigate("/home")}
-            className="cursor-pointer font-bold text-2xl text-yellow-500 lg:text-3xl"
+            className="cursor-pointer font-bold text-2xl text-teal-400 lg:text-3xl"
           >
             MinaAsif
           </a>
         </div>
+<ThemeToggle/>
 
-        <div>
-          <button
-            onClick={() => navigate("/contact")}
-            className="lg:mr-52 md:mr-24 px-3 py-2 bg-yellow-500 text-black font-semibold rounded-3xl shadow-md hover:bg-yellow-600 transition"
-          >
-            Contact Me
-          </button>
-        </div>
+        
       </nav>
       <Outlet />
     </>

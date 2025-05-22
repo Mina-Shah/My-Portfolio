@@ -26,7 +26,11 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;
