@@ -49,6 +49,7 @@ const About = () => {
               <img
                 src={tech.src}
                 alt={tech.alt}
+                loading="lazy"
                 className="h-9 lg:h-12 transition-transform duration-300 transform group-hover:scale-110"
               />
               <p className="mt-2 text-sm text-gray-700 dark:text-gray-600">{tech.name}</p>

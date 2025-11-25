@@ -86,6 +86,7 @@ const Projects = () => {
               <img
                 src={image.src}
                 alt={image.alt}
+                loading="lazy"
                 className="w-full h-40 lg:h-60 rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-xl"
               />
             </div>

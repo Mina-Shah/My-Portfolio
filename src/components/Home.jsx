@@ -64,6 +64,8 @@ const Home = () => {
               <img
                 key={index}
                 src={src}
+                loading="eager"
+                fetchPriority="high"
                 alt={`Mockup ${index + 1}`}
                 className="rounded-lg w-auto h-52 object-cover shadow-2xl"
               />
